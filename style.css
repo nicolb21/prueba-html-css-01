@@ -1,8 +1,65 @@
+/*importo una fuente de google font de la parte de get embed code*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* poner * es un cambio universal*/
+/* en este caso aplicamos un reset al marguen y al padding*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body{
     background-color: #000000; /*color de fondo - negro*/
     color: #F6F6F6; /*color de letras - casi blanco (sal marina)*/  
+    height: 100vh; /* altura en % del viewport*/
+    box-sizing: border-box; /*responsable de como se calcula el alto y el ancho del elemento body*/
 }
 
-strong{
+.titulo-destaque{  /*clase del html en css*/
     color: #22D4FD;
+}
+
+.presentacion{
+    /* display: flex; → comenzamos a utilizar Flexbox. A partir de este punto, todos los elementos dentro del contenedor se llaman elementos hijos */
+    display: flex; /*alinea horizontalmente por defecto*/
+    align-items: center;
+    margin: 10% 18%; /*10-vertical  15-horizontal*/
+    justify-content: space-between; /*alinear y justificar elementos*/
+}
+
+.presentacion_contenido{
+    width: 615px; /*anchura*/
+    display: flex; /*alinea horizontalmente por defecto*/
+    flex-direction: column; /*alinea verticalmente como columna*/
+    gap: 40px; /*el tamaño de los espacios entre filas y columnas*/
+} 
+
+.presentacion_contenido_titulo{
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+
+.presentacion_contenido_texto{
+    font-size: 24px ;
+    font-family: "Montserrat", sans-serif;
+}
+
+.presentacion_enlaces{
+    display: flex; /*alinea horizontalmente*/
+    justify-content: space-between; 
+}
+
+.presentacion_enlace_link{
+    width: 280px;
+    background-color: #22D4FD;
+    text-align: center;
+    padding: 21.5px 0px;
+    border-radius: 16px; /*crea radio en las esquinas de los botones*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px ;
+    font-weight: 600; /*SemiBold*/
+    color: #000000;
+    text-decoration: none; /*sacar subrayado*/
+
 }
