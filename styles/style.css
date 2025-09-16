@@ -1,0 +1,158 @@
+/*importo una fuente de google font de la parte de get embed code*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* poner * es un cambio universal*/
+/* en este caso aplicamos un reset al marguen y al padding*/
+* {
+    padding: 0;
+    margin: 0;
+}
+:root{ /* creacion de variables para utilizarlas en el archivo, necesario por si necesitamos modificar el archivo luego y modificar todo de una vez,
+    es decir optimizar el codigo*/
+    --color-primario: #000000; /*color fondo*/
+    --color-secundario: #f6f6f6; /*color texto parrafos*/
+    --color-terciario: #22D4FD; /*color texto resaltado*/
+    --color-hover: #272727;
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+
+.header {
+    padding: 35px 360px 0px;
+}
+
+.header_menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    gap: 0px 80px;
+}
+
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.header_menu_link:hover {
+    color: #007bff;
+
+}
+
+body {
+    background-color: var(--color-primario);
+    /*color de fondo - negro*/
+    color: var(--color-secundario);
+    /*color de letras - casi blanco (sal marina)*/
+    /* height: 100vh; /* altura en % del viewport*/
+    box-sizing: border-box;
+    /*responsable de como se calcula el alto y el ancho del elemento body*/
+}
+
+
+.presentacion {
+    /* display: flex; → comenzamos a utilizar Flexbox. A partir de este punto, todos los elementos dentro del contenedor se llaman elementos hijos */
+    display: flex;
+    /*alinea horizontalmente por defecto*/
+    align-items: center;
+    /*margin: 10% 18%; lo reemplazo por padding -- 10-vertical  15-horizontal*/
+    justify-content: space-between;
+    /*alinear y justificar elementos*/
+    padding: 60px 355px 150px 300px;
+}
+
+.presentacion_contenido {
+    width: 640px; /*anchura*/
+    display: flex;
+    /*alinea horizontalmente por defecto*/
+    flex-direction: column;
+    /*alinea verticalmente como columna*/
+    gap: 60px ;
+    /*el tamaño de los espacios entre filas y columnas*/
+}
+
+.presentacion_contenido_titulo {
+    font-size: 36px;
+    font-family: var(--fuente-krona);
+    text-align: justify;
+}
+
+.titulo-destaque {
+    /*clase del html en css*/
+    color: var(--color-terciario);
+}
+
+.presentacion_contenido_texto {
+    font-size: 24px;
+    font-family: var(--fuente-montserrat);
+    text-align: justify;
+}
+
+.presentacion_enlaces {
+    display: flex;
+    /*alinea horizontalmente*/
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+
+.presentacion_enlaces_subtitulo {
+    font-size: 24px;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    /*regular*/
+}
+
+.presentacion_enlace_link {
+    width: 378px;
+    /*background-color: #000000;*/
+    text-align: center;
+    padding: 21.5px 0px;
+    border-radius: 8px;
+    /*crea radio en las esquinas de los botones*/
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    /*SemiBold*/
+    color: var(--color-secundario);
+    text-decoration: none;
+    /*sacar subrayado*/
+    border: 2px solid var(--color-terciario);
+    /*tamaño del borde - tipo de borde - color*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*al pasar el mouse sobre los botones estos cambian de color*/
+.presentacion_enlace_link:hover {
+    background-color: var(--color-hover);
+    /* padding: 3% ; agrandaria el boton */
+    cursor: pointer;
+    border: 2px solid #0000FF;
+}
+
+.presentacion_imagen {
+    width: 500px;
+    /* Ancho*/
+    height: 600px;
+    /* Alto*/
+}
+
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 13px 0px 13px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 400;
+    /*regular*/
+}
