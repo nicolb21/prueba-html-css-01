@@ -8,11 +8,16 @@
     padding: 0;
     margin: 0;
 }
-:root{ /* creacion de variables para utilizarlas en el archivo, necesario por si necesitamos modificar el archivo luego y modificar todo de una vez,
+
+:root {
+    /* creacion de variables para utilizarlas en el archivo, necesario por si necesitamos modificar el archivo luego y modificar todo de una vez,
     es decir optimizar el codigo*/
-    --color-primario: #000000; /*color fondo*/
-    --color-secundario: #f6f6f6; /*color texto parrafos*/
-    --color-terciario: #22D4FD; /*color texto resaltado*/
+    --color-primario: #000000;
+    /*color fondo*/
+    --color-secundario: #f6f6f6;
+    /*color texto parrafos*/
+    --color-terciario: #22D4FD;
+    /*color texto resaltado*/
     --color-hover: #272727;
     --fuente-montserrat: "Montserrat", sans-serif;
     --fuente-krona: "Krona One", sans-serif;
@@ -20,7 +25,7 @@
 
 
 .header {
-    padding: 35px 360px 0px;
+    padding: 2% 0% 0% 15%;
 }
 
 .header_menu {
@@ -32,7 +37,9 @@
 
 .header_menu_link {
     font-family: var(--fuente-montserrat);
-    font-size: 1.5rem; /*24px*/ /*usamos rem para que este mas accesible*/ 
+    font-size: 1.5rem;
+    /*24px*/
+    /*usamos rem para que este mas accesible*/
     font-weight: 600;
     color: var(--color-terciario);
     text-decoration: none;
@@ -62,16 +69,18 @@ body {
     /*margin: 10% 18%; lo reemplazo por padding -- 10-vertical  15-horizontal*/
     justify-content: space-between;
     /*alinear y justificar elementos*/
-    padding: 60px 355px 150px 300px;
+    padding: 5% 15%;
+    gap: 82px;
 }
 
 .presentacion_contenido {
-    width: 640px; /*anchura*/
+    width: 50%;
+    /*anchura*/
     display: flex;
     /*alinea horizontalmente por defecto*/
     flex-direction: column;
     /*alinea verticalmente como columna*/
-    gap: 60px ;
+    gap: 60px;
     /*el tamaño de los espacios entre filas y columnas*/
 }
 
@@ -110,7 +119,8 @@ body {
 }
 
 .presentacion_enlace_link {
-    width: 378px;
+    /* width: 378px; */
+    width: 50%;
     /*background-color: #000000;*/
     text-align: center;
     padding: 21.5px 0px;
@@ -139,10 +149,8 @@ body {
 }
 
 .presentacion_imagen {
-    width: 500px;
-    /* Ancho*/
-    height: 600px;
-    /* Alto*/
+    width: 50%;
+    /* Ancho del elemento padre*/
 }
 
 
@@ -155,4 +163,28 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     /*regular*/
+}
+
+/*ADAPTAR LA PAGINA A PANTALLAS CHICAS */
+/*Puedo poner diferentes @media con diferentes maximos de pantalla y combinando max y minimo → @media (min-width: 480px ) and (max-width: 800px) */
+@media (max-width: 1200px) {
+    /*si estoy por debajo de este ancho cambio a las siguientes propiedades*/
+
+    .header {
+        padding: 10%;
+    }
+
+    .header_menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        /*pone en columna pero los ultimos items son los primeros y viceversa*/
+        padding: 5%;
+    }
+
+    .presentacion_contenido {
+        width: auto; /* se adapta siempre al elemento padre automaticamente*/
+    }
 }
